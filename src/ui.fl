@@ -6,40 +6,85 @@ class UserInterface {open
 } {
   Function {make_window()} {open
   } {
-    Fl_Window {} {open
-      xywh {766 473 501 320} type Double visible
+    Fl_Window {} {
+      label espup open selected
+      xywh {3273 401 795 320} type Double resizable visible
     } {
       Fl_Input default_host_text_input {
         label {Default host:}
-        xywh {100 26 145 24}
+        xywh {125 22 170 24}
       }
       Fl_Button install_button {
         label Install
-        xywh {245 25 64 20}
-      }
-      Fl_Input esp_idf_version_text_input {
-        label {ESP-IDF version:}
-        xywh {120 50 100 24}
+        xywh {120 265 125 50}
       }
       Fl_Input export_file_text_input {
         label {Export file:}
-        xywh {120 75 100 24}
-      }
-      Fl_Input extra_crates_text_input {
-        label {Extra crates:}
-        xywh {120 100 100 24}
-      }
-      Fl_Input llvm_version_text_input {
-        label {LLVM version:}
-        xywh {120 125 100 24}
+        xywh {125 48 170 24}
       }
       Fl_Input nightly_version_text_input {
         label {Nightly version:}
-        xywh {120 150 100 24}
+        xywh {125 97 170 24}
       }
       Fl_Input toolchain_version_text_input {
         label {Toolchain version:}
-        xywh {120 175 100 24}
+        xywh {125 123 170 24}
+      }
+      Fl_Check_Button esp32 {
+        label ESP32
+        xywh {124 205 64 15} down_box DOWN_BOX
+      }
+      Fl_Check_Button esp32s2 {
+        label {ESP32-S2}
+        xywh {186 205 64 15} down_box DOWN_BOX
+      }
+      Fl_Check_Button esp32c2 {
+        label {ESP32-C2}
+        xywh {439 202 59 20} down_box DOWN_BOX
+      }
+      Fl_Check_Button esp32c3 {
+        label {ESP32-C3}
+        xywh {354 205 64 15} down_box DOWN_BOX
+      }
+      Fl_Check_Button esp32s3 {
+        label {ESP32-S3}
+        xywh {269 205 64 15} down_box DOWN_BOX
+      }
+      Fl_Check_Button espflash {
+        label espflash
+        xywh {124 220 64 15} down_box DOWN_BOX
+      }
+      Fl_Check_Button {cargo-espflash} {
+        label {cargo-espflash}
+        xywh {199 220 64 15} down_box DOWN_BOX
+      }
+      Fl_Check_Button ldproxy {
+        label ldproxy
+        xywh {314 220 64 15} down_box DOWN_BOX
+      }
+      Fl_Check_Button sccache {
+        label sccache
+        xywh {379 220 64 15} down_box DOWN_BOX
+      }
+      Fl_Input_Choice esp_idf {
+        label {ESP-IDF Version} open
+        xywh {125 147 170 23}
+      } {}
+      Fl_Input_Choice llvm_version {
+        label {LLVM Version} open
+        xywh {125 73 170 23}
+      } {}
+      Fl_Input_Choice log_level {
+        label {Log level} open
+        xywh {125 172 170 23}
+      } {}
+      Fl_Box {} {
+        label Targets
+        xywh {65 204 64 15}
+      }
+      Fl_Box {} {
+        label {Extra Crates}
+        xywh {49 220 64 15}
       }
     }
   }
